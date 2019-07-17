@@ -274,7 +274,7 @@ textarea{height:auto}
 .headerSearch .delete{position:absolute;top:50%;right:15px;display:inline-block;width:18px;height:18px;margin-top:-9px;background:url('../images/ico_headerMenu.png') no-repeat -160px 0;}
 .headerSearch.on{display:block;}
 
-.gnbSubMenu{display:none;position:absolute;top:70px;left:0;width:100%;background:rgba(255,255,255,0.8);z-index:50;}
+.gnbSubMenu{display:none;position:absolute;top:70px;left:0;height:214px;width:100%;background:rgba(255,255,255,0.8);z-index:50;}
 .gnbSubMenu .inner {width:1250px;margin:0 auto;padding:30px 0;}
 .gnbSubMenu .inner .menu:after{content:"";display:block;clear:both;}
 .gnbSubMenu .inner .menu ul {float:left;margin-left:60px;}
