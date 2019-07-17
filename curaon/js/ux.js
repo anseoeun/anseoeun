@@ -133,7 +133,7 @@ function mGnbMenu(){
 				prevEl: '#mainVisualSlider .swiper-button-prev',
 				clickable:true,
 			  },
-				//autoplay: {delay:5000, disableOnInteraction:false},
+				autoplay: {delay:5000, disableOnInteraction:false},
 				loop: true,			  
 				speed:500
 			});
@@ -268,7 +268,7 @@ function artistsSlider(){
 				el: '#artistsSlider .swiper-pagination',
 				clickable: true,
 			},				
-			//autoplay: {delay:2000, disableOnInteraction:false},
+			autoplay: {delay:2000, disableOnInteraction:false},
 			loop: true,			
 		}
 	});
