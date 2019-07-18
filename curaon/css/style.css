@@ -412,6 +412,7 @@ textarea{height:auto}
 @media screen and (max-width:1024px){
     .mainVisual ul li .inner{padding:0 15px;width:auto;}
     .mainVisual ul li{height:240px;}
+    .mainVisual ul li > a{display:block;position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;}
     .mainVisual ul li a{background-size:cover;background-position:0 20%;}
 	.mainVisual ul li .visual{background-size:cover;}
 
@@ -466,7 +467,7 @@ textarea{height:auto}
 .requestWork .requestWorkList ul{}
 .requestWork .requestWorkList ul li{float:left;width:403px;margin-right:20px;}
 .requestWork .requestWorkList ul li:last-child{margin-right:0;}
-.requestWork .requestWorkList .work {position:relative;width:100%;}
+.requestWork .requestWorkList .work {position:relative;width:100%;display:block;}
 .requestWork .requestWorkList .work .img {}
 .requestWork .requestWorkList .work .img img {width:100%;}
 .requestWork .requestWorkList .work .time {position:relative;height:36px;background: #000;}
@@ -506,7 +507,7 @@ textarea{height:auto}
 .artWork .artWorkList:hover .swiper-button-next{opacity:1;}
 .artWork .artWorkList ul{}
 .artWork .artWorkList li{float:left;width:auto;margin-right:15px;}
-.artWork .artWorkList .work {position:relative;width:100%;}
+.artWork .artWorkList .work {position:relative;width:100%;display:block;}
 .artWork .artWorkList .work .img {}
 .artWork .artWorkList .work .img img {width:auto;height:200px;}
 .artWork .artWorkList .work .desc {padding-top:15px;}
@@ -529,12 +530,12 @@ textarea{height:auto}
 .artists .artistsList:hover .swiper-button-prev,
 .artists .artistsList:hover .swiper-button-next{opacity:1;}
 .artists .artistsList li{float:left;width:190px;margin-right:22px;}
-.artists .artistsList .work {position:relative;width:100%;}
+.artists .artistsList .work {position:relative;width:100%;display:block;}
 .artists .artistsList .work .img {width:190px;height:190px;}
 .artists .artistsList .work .img img {width:100%;height:100%;border-radius: 190px;}
 .artists .artistsList .work .desc {padding-top:15px;text-align: center;}
 .artists .artistsList .work .desc .name {font-size:18px;color: #333333;font-weight:500;}
-.artists .artistsList .work .desc .info {font-size:14px;color: #999999;font-weight:200;}
+.artists .artistsList .work .desc .info {font-size:14px;color: #999999;font-weight:200;letter-spacing:-0.05em;}
 .artists .artistsList .work .desc .position {line-height:1em;font-size:12px;}
 .artists .artistsList .work .desc .position i {display:inline-block;width:7px;height:10px;margin-right:5px;background:url('../images/ico_mapPos.png') no-repeat 0 0;}
 .artists .artistsList .work .desc .position span {display:inline-block;font-style:italic;font-weight:200;color: #999999;}
