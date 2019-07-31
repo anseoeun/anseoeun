@@ -18,124 +18,18 @@
 
 <!-- wrap -->
 <div class="wrap">
-	<!-- header -->
-	<div class="header">  
-		<div class="inner"> 
-			<a href="#none" class="mBtn"><span></span></a>
-			<h1 class="logo"><a href="#none">로고</a></h1>
-			<div class="gnbMenu"  id="gnbMenuSlider">
-				<ul class="menu">
-					<li><a href="#none">CURAON</a></li>
-					<li class="subHas"><a href="#artworks">ARTWORKS</a></li>
-					<li><a href="#none">ARTISTS</a></li>
-					<li><a href="#none">GALLERIES</a></li>
-					<li><a href="#none">AUCTIONS</a></li>
-					<li class="subHas"><a href="#artboard">ARTBOARD</a></li>
-				</ul>
-			</div>                
-			<div class="headerMenu">
-				<span class="menu">
-					<a href="javascript:void(0)" class="noti mHide"><i></i></a>
-					<a href="javascript:void(0)" class="chat mHide"><i></i></a>
-					<a href="javascript:void(0)" class="user mHide"><i></i></a>
-					<a href="javascript:void(0)" class="search"><i></i></a>
-				</span>
-			</div>
-			<span class="headerSearch">
-				<span class="search"><input type="text" placeholder="Search"> </span>
-				<a href="javascript:void(0)" class="delete"><i></i></a>
-			</span>			
-		</div>
-		<!-- gnbSubMenu -->
-		<div class="gnbSubMenu">
-			<div class="inner">
-				<div class="menu" id="artworks">
-					<ul>
-						<li><a href="javascript:void(0)">PAINTING</a></li>
-						<li><a href="javascript:void(0)">PICTURE</a></li>
-						<li><a href="javascript:void(0)">SCULPTURE</a></li>
-						<li><a href="javascript:void(0)">PRINT&EDITION</a></li>
-					</ul>
-					<ul>
-						<li><a href="javascript:void(0)">WORK ON PAPER</a></li>
-						<li><a href="javascript:void(0)">NEW MEDIA</a></li>
-						<li><a href="javascript:void(0)">MIXED MEDIA</a></li>
-						<li><a href="javascript:void(0)">DESIGN</a></li>
-					</ul>
-				</div>
-				<div class="menu" id="artboard" style="display:none;">
-					<ul>
-						<li><a href="javascript:void(0)">EXHIBITIONS</a></li>
-						<li><a href="javascript:void(0)">NEWS</a></li>
-						<li><a href="javascript:void(0)">BOARD</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- // gnbSubMenu -->			
-	</div>
-	<!-- // header -->
-	
-	<!-- mSlideMenu -->
-	<div class="mSlideMenu">
-		<div class="mask"></div>
-		<div class="inner">
-			<a href="#none" class="close"></a>
-			<div class="scroll">
-				<div class="menuTop">
-					<div class="headerMenu">
-						<span class="menu">
-							<a href="javascript:void(0)" class="noti"><i></i></a>
-							<a href="javascript:void(0)" class="chat"><i></i></a>
-							<a href="javascript:void(0)" class="user"><i></i></a>
-							<a href="javascript:void(0)" class="search"><i></i></a>
-						</span>
-					</div>
-					<span class="headerSearch">
-						<span class="search"><input type="text" placeholder="Search"> </span>
-						<a href="javascript:void(0)" class="delete"><i></i></a>
-					</span>						
-				</div>
-				<!-- mGnbMenu -->
-				<div class="mGnbMenu">
-					<ul>
-						<li><a href="javascript:void(0)">CURAON</a></li>
-						<li class="hasSub"><a href="javascript:void(0)">Artworks</a>
-							<div class="subMenu">
-								<ul>
-									<li><a href="javascript:void(0)">PAINTING</a></li>
-									<li><a href="javascript:void(0)">PICTURE</a></li>
-									<li><a href="javascript:void(0)">SCULPTURE</a></li>
-									<li><a href="javascript:void(0)">PRINT&EDITION</a></li>
-								</ul>
-								<ul>
-									<li><a href="javascript:void(0)">WORK ON PAPER</a></li>
-									<li><a href="javascript:void(0)">NEW MEDIA</a></li>
-									<li><a href="javascript:void(0)">MIXED MEDIA</a></li>
-									<li><a href="javascript:void(0)">DESIGN</a></li>
-								</ul>
-							</div>
-						</li>
-						<li><a href="javascript:void(0)">ARTISTS</a></li>
-						<li><a href="javascript:void(0)">GALLERIES</a></li>
-						<li><a href="javascript:void(0)">AUCTIONS</a></li>
-						<li class="hasSub"><a href="javascript:void(0)">ARTBOARD</a>
-							<div class="subMenu">
-								<ul>
-									<li><a href="javascript:void(0)">EXHIBITIONS</a></li>
-									<li><a href="javascript:void(0)">NEWS</a></li>
-									<li><a href="javascript:void(0)">BOARD</a></li>
-								</ul>	
-							</div>					
-						</li>
-					</ul>
-				</div>
-				<!-- // mGnbMenu -->
-			</div>
-		</div>
-	</div>
-	<!-- // mSlideMenu -->
 
+	<script>
+		$(function(){
+			$.ajax({
+				url: 'header.html', 
+				dataType: 'html',
+				success: function(result){
+					$('.wrap').prepend(result);
+				}
+			}); 
+		});
+	</script>
 
 	<div class="mainVisual">
 		<!-- mainVisual -->
@@ -183,8 +77,8 @@
 	<div class="container">
 		<!-- mainContent -->
 	  <div class="mainContent">
-			<!-- requestWork -->
-			<div class="requestWork">
+			<!-- requestWorkArea -->
+			<div class="requestWorkArea sliderType">
 				<h2 class="titType1"><b>CURAON</b></h2>
 				<div class="requestWorkList" id="requestWorkSlider">
 					<div class="swiper-button-prev"></div>
@@ -194,7 +88,7 @@
 							<li class="swiper-slide">
 								<a href="javascript:void(0);" class="work">
 									<div class="img"><img src="../images/temp/temp_requestWorkList_1.png" alt="" /></div>
-									<div class="time">
+									<div class="workTime">
 										<svg width='100%'>
 											<defs>
 												<mask id="mask" x="0" y="0">
@@ -204,8 +98,8 @@
 											</defs>
 											<rect x="0" y="0" width="100%" height="36" class="bg"/>
 											<rect x="0" y="0" width="100%" height="36" class="bg"/>
-											<rect x="0" y="0" width="0%" height="36" class="gageBg"/>
-											<rect x="0" y="0" width="0%" height="36" class="gage"/>
+											<rect x="0" y="0" width="0%" height="36" class="gageBg"/>  <!-- 두개 같은비율로 % -->
+											<rect x="0" y="0" width="0%" height="36" class="gage"/>  <!-- 두개 같은비율로 % -->
 										</svg>
 									</div>
 									<div class="desc">
@@ -218,7 +112,7 @@
 							<li class="swiper-slide">
 								<a href="javascript:void(0);" class="work">
 									<div class="img"><img src="../images/temp/temp_requestWorkList_2.png" alt="" /></div>
-									<div class="time">
+									<div class="workTime">
 										<svg>
 											<defs>
 												<mask id="mask" x="0" y="0">
@@ -228,8 +122,8 @@
 											</defs>
 											<rect x="0" y="0" width="100%" height="36" class="bg"/>
 											<rect x="0" y="0" width="100%" height="36" class="bg"/>
-											<rect x="0" y="0" width="50%" height="36" class="gageBg"/>
-											<rect x="0" y="0" width="50%" height="36" class="gage"/>
+											<rect x="0" y="0" width="50%" height="36" class="gageBg"/> <!-- 두개 같은비율로 % -->
+											<rect x="0" y="0" width="50%" height="36" class="gage"/> <!-- 두개 같은비율로 % -->
 										</svg>
 									</div>
 									<div class="desc">
@@ -242,7 +136,7 @@
 							<li class="swiper-slide">
 								<a href="javascript:void(0);" class="work">
 									<div class="img"><img src="../images/temp/temp_requestWorkList_3.png" alt="" /></div>
-									<div class="time">
+									<div class="workTime">
 										<svg>
 											<defs>
 												<mask id="mask" x="0" y="0">
@@ -252,8 +146,8 @@
 											</defs>
 											<rect x="0" y="0" width="100%" height="36" class="bg"/>
 											<rect x="0" y="0" width="100%" height="36" class="bg"/>
-											<rect x="0" y="0" width="19%" height="36" class="gageBg"/>
-											<rect x="0" y="0" width="19%" height="36" class="gage"/>
+											<rect x="0" y="0" width="19%" height="36" class="gageBg"/>  <!-- 두개 같은비율로 % -->
+											<rect x="0" y="0" width="19%" height="36" class="gage"/>  <!-- 두개 같은비율로 % -->
 										</svg>
 									</div>
 									<div class="desc">
@@ -266,7 +160,7 @@
 							<li class="swiper-slide">
 								<a href="javascript:void(0);" class="work">
 									<div class="img"><img src="../images/temp/temp_requestWorkList_3.png" alt="" /></div>
-									<div class="time">
+									<div class="workTime">
 										<svg>
 											<defs>
 												<mask id="mask" x="0" y="0">
@@ -276,8 +170,8 @@
 											</defs>
 											<rect x="0" y="0" width="100%" height="36" class="bg"/>
 											<rect x="0" y="0" width="100%" height="36" class="bg"/>
-											<rect x="0" y="0" width="19%" height="36" class="gageBg"/>
-											<rect x="0" y="0" width="19%" height="36" class="gage"/>
+											<rect x="0" y="0" width="19%" height="36" class="gageBg"/>  <!-- 두개 같은비율로 % -->
+											<rect x="0" y="0" width="19%" height="36" class="gage"/>  <!-- 두개 같은비율로 % -->
 										</svg>
 									</div>
 									<div class="desc">
@@ -289,13 +183,12 @@
 							</li>
 						</ul>
 					</div>
-					<div class="swiper-pagination"></div>
 				</div>
 			</div>
-			<!-- // requestWork -->
+			<!-- // requestWorkArea -->
 
-			<!-- artWork -->
-			<div class="artWork">
+			<!-- artWorkArea -->
+			<div class="artWorkArea">
 				<h2 class="titType1"><b>ARTWORKS : LANDSCAPE</b></h2>
 				<div class="artWorkList" id="artWorkSlider1">
 					<div class="swiper-button-prev"></div>
@@ -306,11 +199,11 @@
 								<a href="javascript:void(0);" class="work">
 									<div class="img"><img src="../images/temp/temp_artWorkList_1.png" alt="" /></div>
 									<div class="desc">
-										<strong class="tit">$325,000</strong>
-										<div class="naem">Yayoi Kusama</div>
+										<strong class="tit">$325,000 $325,000$325,000$325,000$325,000$325,000$325,000</strong>
+										<div class="naem">Yayoi Kusama Yayoi KusamaYayoi Kusama</div>
 										<div class="info">
-											<u>Infinity Nets, 1993</u>
-											David Benrimon Fine Art
+											<u>Infinity Nets, 1993 Infinity Nets, 1993Infinity Nets, 1993</u>
+											David Benrimon Fine Art David Benrimon Fine ArtDavid Benrimon Fine Art
 										</div>
 									</div>
 								</a>
@@ -384,29 +277,29 @@
 					</div>
 				</div>
 			</div>
-			<!-- // artWork -->			
+			<!-- // artWorkArea -->			
 
-			<!-- artWork -->
-			<div class="artWork">
+			<!-- artWorkArea -->
+			<div class="artWorkArea">
 				<h2 class="titType1"><B>ARTWORKS : <br class="wHide">EMERGING PHOTOGRAPHY<B></h2>
 				<div class="artWorkList" id="artWorkSlider2">
 					<div class="swiper-button-prev"></div>
 					<div class="swiper-button-next"></div>
 					<div class="swiper-container">
 						<ul class="swiper-wrapper">
-							<li class="swiper-slide">
-								<a href="javascript:void(0);" class="work">
-									<div class="img"><img src="../images/temp/temp_artWorkList2_1.png" alt="" /></div>
-									<div class="desc">
-										<strong class="tit">$325,000</strong>
-										<div class="naem">Yayoi Kusama</div>
-										<div class="info">
-											<u>Infinity Nets, 1993</u>
-											David Benrimon Fine Art
+								<li class="swiper-slide">
+									<a href="javascript:void(0);" class="work">
+										<div class="img"><img src="../images/temp/temp_artWorkList2_1.png" alt="" /></div>
+										<div class="desc">
+											<strong class="tit">$325,000</strong>
+											<div class="naem">Yayoi Kusama</div>
+											<div class="info">
+												<u>Infinity Nets, 1993</u>
+												David Benrimon Fine Art
+											</div>
 										</div>
-									</div>
-								</a>
-							</li>
+									</a>
+								</li>
 							<li class="swiper-slide">
 								<a href="javascript:void(0);" class="work">
 									<div class="img"><img src="../images/temp/temp_artWorkList2_2.png" alt="" /></div>
@@ -476,10 +369,10 @@
 					</div>
 				</div>
 			</div>
-			<!-- // artWork -->			
+			<!-- // artWorkArea -->			
 
-			<!-- artists -->
-			<div class="artists">
+			<!-- artistsArea -->
+			<div class="artistsArea">
 				<h2 class="titType1"><b>ARTISTS	</b></h2>
 				<div class="artistsList" id="artistsSlider">
 					<div class="swiper-button-prev"></div>
@@ -558,62 +451,26 @@
 							</li>
 						</ul>
 					</div>
-					<div class="swiper-pagination"></div>
 				</div>
 			</div>
-			<!-- // artists -->		
+			<!-- // artistsArea -->		
 
 	  </div>
 		<!-- // mainContent -->
 	</div>
 	<!-- ////////////////////////////////////////// container end //////////////////////////////////////////-->
 
-	<!-- footer -->
-	<div id="footer" class="footer">
-		<div class="inner">
-			<span class="fLogo">CURAON</span>
-			<!-- footerMenu -->
-			<div class="footerMenu">
-				<ul>
-					<li>
-						<a href="javascript:void(0);"><span class="tit">About</span> <i class="arr"></i></a>
-						<ul>
-							<li><a href="javascript:void(0);">ABOUT GRAYWALL</a></li>
-							<li><a href="javascript:void(0);">PREVIOUS WORKS</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="javascript:void(0);"><span class="tit">Help center</span> <i class="arr"></i></a>
-						<ul>
-							<li><a href="javascript:void(0);">FAQ</a></li>
-							<li><a href="javascript:void(0);">1:1 INQUIRY</a></li>
-							<li><a href="javascript:void(0);">TERMS OF USE</a></li>
-							<li><a href="javascript:void(0);">PRIVACY POLICY</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="javascript:void(0);"><span class="tit">Contact</span> <i class="arr"></i></a>
-						<ul>
-							<li><a href="javascript:void(0);">CONTACT INFO</a></li>
-							<li><a href="javascript:void(0);">SEND US FEEDBACK</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<!-- //footerMenu -->			
-			<div class="settingMenu">
-				<div class="menu">
-					<a href="javascript:void(0);" class="on">EN</a> <span class="bar"></span>
-					<a href="javascript:void(0);">KR</a> 
-				</div>
-				<div class="menu">
-					<a href="javascript:void(0);" class="on">USD</a> <span class="bar"></span>
-					<a href="javascript:void(0);">KRW</a> 
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- // footer -->
+	<script>
+		$(function(){
+			$.ajax({
+				url: 'footer.html', 
+				dataType: 'html',
+				success: function(result){
+					$('.wrap').append(result);
+				}
+			}); 
+		});
+	</script>
 
 </div>
 <!-- // wrap -->

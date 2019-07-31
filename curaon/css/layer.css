@@ -1,0 +1,51 @@
+
+@charset "utf-8";
+
+body.openPop{overflow: hidden;}
+
+
+.layerPopup{position:fixed;top:0;left:0;width:100%;height:100%;z-index:100;min-width:320px;}
+.layerPopup > .close{position:absolute;top:0;right:0;display:block;width:90px;height:90px;background:url('../images/btn_close3.png') no-repeat 50% 50%;background-size: 32px 32px;}
+.layerPopup .mask{position:absolute;top:0%;left:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.8);}
+.layerPopup .swiper-button-prev {opacity:1;position:absolute;top:50%;left:50%;width:18px;height:32px;margin-left:-500px;margin-top:-16px;background:url('../images/btn_slider2.png') no-repeat 0 0;transition: opacity 0.5s ease;-webkit-transition: opacity 0.5s ease;}
+.layerPopup .swiper-button-next {opacity:1;position:absolute;top:50%;right:50%;width:18px;height:32px;margin-right:-500px;margin-top:-16px;background:url('../images/btn_slider2.png') no-repeat -18px 0;transition: opacity 0.5s ease;-webkit-transition: opacity 0.5s ease;}
+.layerPopup .swiper-button-prev.swiper-button-disabled, 
+.layerPopup .swiper-button-next.swiper-button-disabled{background-position-y: 0 !important;}
+
+.layerPopup .popWrap{max-height:100%;overflow-y:auto;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);-webkit-transform:translate(-50%, -50%);}
+.layerPopup .popup{min-height:300px;width:900px;background: #ffffff;}
+.layerPopup .popup .padding{padding:0 30px;}
+.layerPopup .popHeader{padding:24px 30px;}
+.layerPopup .popHeader .right{float:right;}
+.layerPopup .popHeader .menu .btnType2{margin-left:8px;}
+.layerPopup .popHeader .tit{font-size:30px;font-weight:bold;}
+.layerPopup .popHeader .date{font-size:14px;font-weight:700;}
+.layerPopup .popBody{height:100%;}
+.layerPopup .popBody:after{content:'';display:block;height:30px;}
+
+.layerPopup .popBody.messengerPop:after{display:none;}
+
+
+.popLayoutType1:after{content:'';display:block;clear: both;}
+.popLayoutType1 .leftArea{float:left;width:580px;padding-right:40px;}
+.popLayoutType1 .rightArea{overflow: hidden;}
+
+.popLayoutType2:after{content:'';display:block;clear: both;}
+.popLayoutType2 .leftArea{float:left;width:620px;padding-right:40px;}
+.popLayoutType2 .rightArea{overflow: hidden;}
+
+
+.layerPopup .popAttendWorkDetailArea{height:100%;}
+
+@media screen and (max-width:1024px){
+    .layerPopup > .close{width:50px;height:50px;background:url('../images/btn_close.png') no-repeat 50% 50%;background-size: 18px 18px;z-index:10;}
+    .layerPopup .popWrap{height:100%;width:100%;}
+    .layerPopup .popWrap .popup{height:100%;width:100%;overflow-x:hidden;overflow-y: auto;}
+    .layerPopup .popWrap .popup .padding{padding:0 20px;}
+    .layerPopup .popHeader{padding-left:20px;}
+    .layerPopup .popHeader .tit{font-size:26px;}
+    .layerPopup .popBody:after{height:20px;}
+    .popLayoutType1 .leftArea{float:none;width:auto;padding:0 0;}
+    .popLayoutType2 .leftArea{float:none;width:auto;padding:0 0;}
+    .popLayoutType2 .rightArea{float:none;width:auto;padding:0 0;}
+}

@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=no">
+
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<link type="text/css" rel="stylesheet" href="../css/swiper.min.css" />
+<script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" language="javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" language="javascript" src="../js/ux.js"></script>
+
+</head>
+<body>
+
+<!-- wrap -->
+<div class="wrap">
+
+	<script>
+		$(function(){
+			$.ajax({
+				url: 'header.html', 
+				dataType: 'html',
+				success: function(result){
+					$('.wrap').prepend(result);
+				}
+			}); 
+		});
+	</script>
+
+	<!-- ////////////////////////////////////////// container start//////////////////////////////////////////-->
+	<div class="container">	
+		<!-- content -->
+		<div class="content">
+			<div class="curaonMenu">
+				<ul>
+					<li><a href="#none" onclick="popOpen('#curaonIntro')"><i class="intro"></i><span>Curaon 소개</span></a></li>
+					<li><a href="#none" onclick="popOpen('#requestWorkForm', requestWorkFormCallback)"><i class="write"></i><span>작품 의뢰하기</span></a></li>
+					<li><a href="#none" onclick="popOpen('#myCuraon')"><i class="user"></i><span>나의 Curaon</span></a></li>
+				</ul>
+			</div>
+			<div class="tabType1 tab2">
+				<ul>
+					<li class="on"><a href="#none">진행중</a></li>
+					<li><a href="#none">선정작</a></li>
+				</ul>
+			</div>	
+			
+			<div class="workDetail">
+				<div class="layoutBox">
+					<div class="topInfo"><b>COMMISSION WORK</b><span class="date">2018.06.05</span></div>
+					<p class="workTit">
+						40대 부부가 생활하는 아파트 거실에 걸 수 있는 작품을 
+						원합니다. 젊은 팝 아티스트 작품에 관심 많습니다 작품에 관심 많습니다.
+					</p>
+				</div>
+				
+				<div class="layoutBoxWrap">
+					<div class="layoutBox">
+						<!-- workDetailImgView -->
+						<div class="workDetailImgView">
+							<div class="workTime">
+								<svg>
+									<defs>
+										<mask id="mask" x="0" y="0">
+										<rect x="0" y="0" width="100%" height="36"></rect>
+										<text x="68" y="26">00d  00h  11m </text>
+										</mask>
+									</defs>
+									<rect x="0" y="0" width="100%" height="36" class="bg"></rect>
+									<rect x="0" y="0" width="100%" height="36" class="bg"></rect>
+									<rect x="0" y="0" width="50%" height="36" class="gageBg"></rect> <!-- 두개 같은비율로 % -->
+									<rect x="0" y="0" width="50%" height="36" class="gage"></rect> <!-- 두개 같은비율로 % -->
+								</svg>
+							</div>
+							<div class="workDetailImg"><img src="../images/temp/temp_workDetail.png" alt=""></div>
+
+							<!-- workImgMore -->
+							<div class="workImgMore">
+								<div class="workImgMoreList" id="workImgMoreSlider">
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-container">
+										<ul class="swiper-wrapper">
+											<li class="swiper-slide on">
+												<span class="work">
+													<a href="javascript:void(0);" class="img"><img src="../images/temp/temp_workDetail.png" alt="" /></a>
+												</span>
+											</li>
+											<li class="swiper-slide">
+												<span class="work">
+													<a href="javascript:void(0);" class="img"><img src="../images/temp/temp_reference_1.png" alt="" /></a>
+												</span>
+											</li>
+											<li class="swiper-slide">
+												<span class="work"></span>
+											</li>
+											<li class="swiper-slide">
+												<span class="work"></span>
+											</li>
+											<li class="swiper-slide">
+												<span class="work">
+													<a href="javascript:void(0);" class="img"><img src="https://image.ytn.co.kr/general/jpg/2016/1102/201611021103176838_t.jpg" alt="" /></a>
+												</span>
+											</li>
+											<li class="swiper-slide">
+												<span class="work">
+													<a href="javascript:void(0);" class="img"><img src="../images/temp/temp_artWorkList_1.png" alt="" /></a>
+												</span>
+											</li>								
+											<li class="swiper-slide">
+												<span class="work">
+													<a href="javascript:void(0);" class="img"><img src="../images/temp/temp_workDetail.png" alt="" /></a>
+												</span>
+											</li>
+											<li class="swiper-slide">
+												<span class="work">
+													<a href="javascript:void(0);" class="img"><img src="../images/temp/temp_reference_1.png" alt="" /></a>
+												</span>
+											</li>								
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- // workImgMore -->		
+						</div>
+						<!-- // workDetailImgView -->
+
+						<!-- client -->
+						<div class="client">
+							<div class="clientInfo">
+								<span>클라이언트</span>
+								<strong>Jason Oh</strong>
+								<a href="javascript:void(0);" class="request"><i class="ico iChat"></i><span>작업 문의하기</span></a>
+							</div>
+							<div class="descBox">
+								<div class="info">
+									<b class="tit">예산</b>
+									<p class="account">3,000,000 원</p>
+									<b class="tit">기간</b>
+									<p class="term">6월 8일~6월 12일</p>
+									<p class="txt">현재 16 명의 아티스트가 참가 중입니다.</p>
+								</div>
+								<div class="keyword">
+									<b class="tit">KEYWORD</b>
+									<ul class="list">
+										<li><a href="javascript:void(0);">한국젊은작가</a></li>
+										<li><a href="javascript:void(0);">한국현대미술</a></li>
+										<li><a href="javascript:void(0);">마리킴</a></li>
+										<li><a href="javascript:void(0);">단색</a></li>
+										<li><a href="javascript:void(0);">팝아트</a></li>
+										<li><a href="javascript:void(0);">키스해링</a></li>
+										<li><a href="javascript:void(0);">올덴버그</a></li>
+										<li><a href="javascript:void(0);">리히텐슈타인</a></li>
+										<li><a href="javascript:void(0);">회화</a></li>
+										<li><a href="javascript:void(0);">영아티스트</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="btn">
+								<a href="javascript:void(0);" onclick="popOpen('#requestApplyForm');">참가 신청</a>
+							</div>
+						</div>
+						<!-- // client -->				
+
+						<div class="tabType2 tab2" id="tabPosition1">
+							<ul>
+								<li class="on"><a href="javascript:void(0);" onclick="scrollMove('#tabPosition1');">리퀘스트 개요</a></li>
+								<li><a href="javascript:void(0);" onclick="scrollMove('#tabPosition2');">참가 아티스트</a></li>								
+							</ul>
+						</div>
+						<!-- workSummary -->
+						<div class="workSummary">
+							<p class="titType3">
+								<b class="tit">공간 설명</b>
+							</p>
+							<p class="txt">
+								서울 성수동 아파트에 살고 있는 40대 주부입니다. 최근 둘째 아들이 결혼을 하고 부부만 남 게 되었습니다. 남편은 의료기 분야 사업을 40년 이상 진행하고 있고, 부부동반 사교 모임이 많은데 최근 국내 아트 컬렉터 모임에 초대된 적이 있습니다. 현대미술이나 아트 컬렉터라고 하면 대규모의 자금이 오가는 ‘큰 손’ 모임이라고 생각했었는데 200, 300만원 대 작품도 다양 한 것을 보고 놀랐습니다. 그리고 한국 젊은 작가 중에서도 좋은 작품이 정말 많더라구요. <br>
+								아들의 출가로 집이 썰렁해졌는데 거실에 집안 분위기를 살릴 수 있는 작품이 있었으면 좋겠 습니다. 아파트는 40평형 대 일반 주상복합 아파트인데 베란다를 터서 개조했습니다. 지금까 지는 강아지를 키우고 있어서 인테리어에 그렇게 신경을 쓰지 못했습니다. 벽은 아이보리 계열에 깔끔한 편입니다. 거실에 홈시어터 시스템이 있고 바닥은 원목, 커튼과 소파는 그린 계 열인데 사진을 보내드리면 톤에 맞춰서 작품을 추천하거나 제작이 가능한지 궁금합니다. 거실 벽은 3m * 2.5m 정도의 사이즈고, 가격대는 일단 300만원대 안팎으로 생각하고 있습니다. 집안 분위기에 맞춰서 큰 사이즈의 그림을 새로 제작할 경우도 그 가격대 맞출 수 있는지도 궁금합니다.
+							</p>
+							<div class="info"><b>선호하는 작품 사이즈</b><span>300*250cm</span></div>
+							
+							<p class="titType3">
+								<b class="tit">선호하는 작품 스타일 설명</b>
+							</p>
+							<p class="txt">
+								남편 사업 때문에 집에도 손님을 종종 초대하는 편인데, 그림을 보면서 손님들과 자연스럽게 대화 할 수 있는 작품이면 더 좋을 것 같구요. 컬렉터 모임에서 마리 킴이라는 작가의 작품이 자꾸 생각나던데, 비슷한 부류의 다른 작품들이 궁금합니다. 작가의 인지도보다는 분위기가 거실과 잘 맞았으면 좋겠어요. 모임에서 알게 되었는ㅍ데 젊은 작가를 후원하는 방향으로도 진행되었으면 좋겠습니다. 
+							</p>
+
+							<p class="titType3">
+								<b class="tit">참고 이미지</b>
+							</p>
+							<!-- reference -->
+							<div class="reference">
+								<div class="referenceList" id="referenceSlider">
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-container">
+										<ul class="swiper-wrapper">
+											<li class="swiper-slide">
+												<a href="javascript:void(0);" class="work">
+													<div class="img"><img src="../images/temp/temp_reference_1.png" alt="" /></div>
+												</a>
+											</li>
+											<li class="swiper-slide">
+												<a href="javascript:void(0);" class="work">
+													<div class="img"><img src="../images/temp/temp_reference_2.png" alt="" /></div>
+												</a>
+											</li>
+											<li class="swiper-slide">
+												<a href="javascript:void(0);" class="work">
+													<div class="img"><img src="../images/temp/temp_reference_3.png" alt="" /></div>
+												</a>
+											</li>
+											<li class="swiper-slide">
+												<a href="javascript:void(0);" class="work">
+													<div class="img"><img src="../images/temp/temp_reference_1.png" alt="" /></div>
+												</a>
+											</li>
+											<li class="swiper-slide">
+												<a href="javascript:void(0);" class="work">
+													<div class="img"><img src="../images/temp/temp_reference_2.png" alt="" /></div>
+												</a>
+											</li>
+											<li class="swiper-slide">
+												<a href="javascript:void(0);" class="work">
+													<div class="img"><img src="../images/temp/temp_reference_3.png" alt="" /></div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- // reference -->	
+							<div class="line"></div>
+
+							<div class="tabType2 tab2" id="tabPosition2">
+								<ul>
+									<li><a href="javascript:void(0);" onclick="scrollMove('#tabPosition1');">리퀘스트 개요</a></li>
+									<li class="on"><a href="javascript:void(0);" onclick="scrollMove('#tabPosition2');">참가 아티스트</a></li>
+								</ul>
+							</div>							
+							<div class="workListType1 list3" id="attendArtistMoreList">
+								<div class="workList">
+									<ul>
+										<li>
+											<div class="work">
+												<div class="img">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<img src="../images/temp/temp_attendArtistList.png" alt="" />
+													</a>
+												</div>
+												<div class="desc">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+														<strong class="name">idabcd idabcdidabcd</strong>
+														<div class="date">2018.04.25</div>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="work">
+												<div class="img">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<img src="../images/temp/temp_attendArtistList.png" alt="" />
+													</a>
+												</div>
+												<div class="desc">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+														<strong class="name">idabcd idabcdidabcd</strong>
+														<div class="date">2018.04.25</div>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="work">
+												<div class="img">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<img src="../images/temp/temp_attendArtistList.png" alt="" />
+													</a>
+												</div>
+												<div class="desc">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+														<strong class="name">idabcd idabcdidabcd</strong>
+														<div class="date">2018.04.25</div>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="work">
+												<div class="img">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<img src="../images/temp/temp_attendArtistList.png" alt="" />
+													</a>
+												</div>
+												<div class="desc">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+														<strong class="name">idabcd idabcdidabcd</strong>
+														<div class="date">2018.04.25</div>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="work">
+												<div class="img">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<img src="../images/temp/temp_attendArtistList.png" alt="" />
+													</a>
+												</div>
+												<div class="desc">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+														<strong class="name">idabcd idabcdidabcd</strong>
+														<div class="date">2018.04.25</div>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="work">
+												<div class="img">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<img src="../images/temp/temp_attendArtistList.png" alt="" />
+													</a>
+												</div>
+												<div class="desc">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+														<strong class="name">idabcd idabcdidabcd</strong>
+														<div class="date">2018.04.25</div>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="work">
+												<div class="img">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<img src="../images/temp/temp_attendArtistList.png" alt="" />
+													</a>
+												</div>
+												<div class="desc">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+														<strong class="name">idabcd idabcdidabcd</strong>
+														<div class="date">2018.04.25</div>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="work">
+												<div class="img">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<img src="../images/temp/temp_attendArtistList.png" alt="" />
+													</a>
+												</div>
+												<div class="desc">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+														<strong class="name">idabcd idabcdidabcd</strong>
+														<div class="date">2018.04.25</div>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="work">
+												<div class="img">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<img src="../images/temp/temp_attendArtistList.png" alt="" />
+													</a>
+												</div>
+												<div class="desc">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+														<strong class="name">idabcd idabcdidabcd</strong>
+														<div class="date">2018.04.25</div>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="work">
+												<div class="img">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<img src="../images/temp/temp_attendArtistList.png" alt="" />
+													</a>
+												</div>
+												<div class="desc">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+														<strong class="name">idabcd idabcdidabcd</strong>
+														<div class="date">2018.04.25</div>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="work">
+												<div class="img">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<img src="../images/temp/temp_attendArtistList.png" alt="" />
+													</a>
+												</div>
+												<div class="desc">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+														<strong class="name">idabcd idabcdidabcd</strong>
+														<div class="date">2018.04.25</div>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="work">
+												<div class="img">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<img src="../images/temp/temp_attendArtistList.png" alt="" />
+													</a>
+												</div>
+												<div class="desc">
+													<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+														<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+														<strong class="name">idabcd idabcdidabcd</strong>
+														<div class="date">2018.04.25</div>
+													</a>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<div class="loading">
+										<div class="loadingBar"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- // workSummary -->
+
+						<div class="data" style="display:none">
+							<li style="opacity:0">
+								<div class="work">
+									<div class="img">
+										<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+											<img src="../images/temp/temp_attendArtistList.png" alt="" />
+										</a>
+									</div>
+									<div class="desc">
+										<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+											<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+											<strong class="name">idabcd idabcdidabcd</strong>
+											<div class="date">2018.04.25</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li style="opacity:0">
+								<div class="work">
+									<div class="img">
+										<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+											<img src="../images/temp/temp_attendArtistList.png" alt="" />
+										</a>
+									</div>
+									<div class="desc">
+										<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+											<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+											<strong class="name">idabcd idabcdidabcd</strong>
+											<div class="date">2018.04.25</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li style="opacity:0">
+								<div class="work">
+									<div class="img">
+										<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+											<img src="../images/temp/temp_attendArtistList.png" alt="" />
+										</a>
+									</div>
+									<div class="desc">
+										<a href="javascript:void(0);" onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)">
+											<span class="starGrade small"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>													
+											<strong class="name">idabcd idabcdidabcd</strong>
+											<div class="date">2018.04.25</div>
+										</a>
+									</div>
+								</div>
+							</li>
+						</div>
+						<script>
+							$(function(){
+								var obj = $('.data').html();
+								moreList('#attendArtistMoreList', obj);
+							});
+						</script>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // content -->
+	</div>
+	<!-- ////////////////////////////////////////// container end //////////////////////////////////////////-->
+
+	<script>
+		$(function(){
+			$.ajax({
+				url: 'footer.html', 
+				dataType: 'html',
+				success: function(result){
+					$('.wrap').append(result);
+				}
+			}); 
+		});
+	</script>
+
+</div>
+<!-- // wrap -->
+
+<!-- 큐라온소개 -->
+<!-- onclick="popOpen('#curaonIntro')" -->
+<div class="layerPopup mFulll" id="curaonIntro" style="display:none;">
+	<script>
+		$(function(){
+			$.ajax({
+				url: 'pop_curaonIntro.html', 
+				dataType: 'html',
+				success: function(result){
+					$('#curaonIntro').append(result);
+					
+				}
+			}); 
+		});
+	</script>
+</div>
+
+<!-- 작품 의뢰하기 -->
+<!-- onclick="popOpen('#requestWorkForm', requestWorkFormCallback)" -->
+<div class="layerPopup mFulll" id="requestWorkForm" style="display:none;">
+	<script>
+		$(function(){
+			$.ajax({
+				url: 'pop_requestWorkForm.html', 
+				dataType: 'html',
+				success: function(result){
+					$('#requestWorkForm').append(result);
+					
+				}
+			}); 
+		});
+	</script>
+</div>
+
+<!-- 참가신청 -->
+<!-- onclick="popOpen('#requestApplyForm')" -->
+<div class="layerPopup mFulll" id="requestApplyForm" style="display:none;">
+	<script>
+		$(function(){
+			$.ajax({
+				url: 'pop_requestApplyForm.html', 
+				dataType: 'html',
+				success: function(result){
+					$('#requestApplyForm').append(result);
+				}
+			}); 
+		});
+	</script>
+</div>
+
+<!-- 아티스트 작품 상세 -->
+<!-- onclick="popOpen('#artistWorkDetail', artistWorkDetailCallback)" -->
+<div class="layerPopup mFulll" id="artistWorkDetail" style="display:none;">
+	<script>
+		$(function(){
+			$.ajax({
+				url: 'pop_artistWorkDetail.html', 
+				dataType: 'html',
+				success: function(result){
+					$('#artistWorkDetail').append(result);
+				}
+			}); 
+		});
+	</script>
+</div>
+
+<!-- 나의 의뢰 -->
+<!-- onclick="popOpen('#attendWorkDetail')" -->
+<div class="layerPopup mFulll" id="myCuraon" style="display:none;">
+	<script>
+		$(function(){
+			$.ajax({
+				url: 'pop_myCuraon.html', 
+				dataType: 'html',
+				success: function(result){
+					$('#myCuraon').append(result);
+				}
+			}); 
+		});
+	</script>
+</div>
+
+<!-- 제안받은 작품 목록 -->
+<!-- onclick="popOpen('#attendWorkList')" -->
+<div class="layerPopup mFulll" id="attendWorkList" style="display:none;">
+	<script>
+		$(function(){
+			$.ajax({
+				url: 'pop_attendWorkList.html', 
+				dataType: 'html',
+				success: function(result){
+					$('#attendWorkList').append(result);
+				}
+			}); 
+		});
+	</script>
+</div>
+
+<!-- 제안받은 작품 상세 -->
+<!-- onclick="popOpen('#attendWorkDetail', attendWorkDetailCallback)" -->
+<div class="layerPopup mFulll" id="attendWorkDetail" style="display:none;">
+	<script>
+		$(function(){
+			$.ajax({
+				url: 'pop_attendWorkDetail.html', 
+				dataType: 'html',
+				success: function(result){
+					$('#attendWorkDetail').append(result);
+				}
+			}); 
+		});
+	</script>
+</div>
+
+
+</body>
+
+</html>

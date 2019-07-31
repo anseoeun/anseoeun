@@ -1,0 +1,694 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>큐라온 워크시트</title>
+<script type="text/javascript" language="javascript" src="js/jquery-3.1.1.min.js"></script>
+<!-- style -->
+<style type="text/css">
+	* {	margin:0;padding:0;}
+	body {padding:20px;	font-family:Tahoma, Sans-Serif; color:#333; font-size:11px; background-color:#fff;}
+	/* title */
+	h1 {color:#000; letter-spacing:-2px;}
+	table{table-layout:fixed;width:100%;}
+	#mwork legend {display:none;}
+	/* table */
+	#mwork table {width:100%; border-collapse:collapse; border:0px solid #666;}
+	#mwork caption {text-align:left; font-size:200%; color:#999;}
+	#mwork th {padding:6px; border:1px solid #666; color:#ccc; font-size:110%; background-color:#000;}
+	#mwork td {padding:4px 10px; padding-left:10px; border:1px solid #666; background-color:#fff;}
+	#mwork .complete{text-align: center;}
+	/* task */
+	#mwork .done {padding:0; font-weight:bold; text-align:center; color:#090;}
+	#mwork .undone {padding:0; font-weight:bold; text-align:center; color:#900;}
+	/* effect */
+	#mwork a,
+	#mwork a:link, #mwork a:visited {color:#009; text-decoration:none;}
+	#mwork a:hover, #mwork a:active {color:#00f; text-decoration:underline;}
+	#mwork td:hover {background-color:#ddd !important;}
+
+	.date{text-align:center;}
+
+</style>
+<!-- //style -->
+<script>
+	$(function(){
+		$('td:nth-child(1)').addClass('category');
+		$('td:nth-child(2)').addClass('depth1');
+		$('td:nth-child(3)').addClass('depth2');
+		$('td:nth-child(4)').addClass('depth3');
+		$('td:nth-child(5)').addClass('filename');
+		$('td:nth-child(6)').addClass('complete');
+		$('td:nth-child(7)').addClass('date');
+		$('td:nth-child(8)').addClass('memo');
+	});
+</script>
+
+</head>
+<body>
+
+<h1>큐라온 Publishing Work Sheet</h1>
+<br>
+
+<div id="mwork">
+	<legend>Update Date : </legend>
+	<table class="mwork" summary="WebPublisher Procedure Sheet" border="1">
+		<thead>
+			<colgroup>
+				<col style='width:100px' />
+				<col style='width:120px' />
+				<col style='width:150px' />
+				<col style='width:150px' />
+				<col style='' />
+				<col style='width:50px' />
+				<col style='width:100px' />
+				<col style='width:30%' />
+			</colgroup>
+			<tr>
+				<th>Category</th>
+				<th>1Depth</th>
+				<th>2Depth</th>
+				<th>3Depth</th>
+				<th>FileName/Link</th>
+				<th>완료</th>
+				<th>완료예정일</th>
+				<th>메모</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="category">메인</td>
+				<td class="depth1"></td>
+				<td class="depth2"></td>
+				<td class="depth3"></td>
+				<td class="filename"><a href="html/main.html" target="_blank">html/main.html</a></td>
+				<td class="complete">완료</td>
+				<td class="date"></td>
+				<td class="memo"></td>
+			</tr>
+			<tr>
+				<td class="category">큐라온</td>
+				<td class="depth1">작품리스트</td>
+				<td class="depth2"></td>
+				<td class="depth3"></td>
+				<td class="filename"><a href="html/curaonMain.html" target="_blank">html/curaonMain.html</a></td>
+				<td class="complete">완료</td>
+				<td class="date"></td>
+				<td class="memo"></td>
+			</tr>
+			<tr>
+				<td class="category"></td>
+				<td class="depth1">작품상세</td>
+				<td class="depth2"></td>
+				<td class="depth3"></td>
+				<td class="filename"><a href="html/curaonDetail.html" target="_blank">html/curaonDetail.html</a></td>
+				<td class="complete">완료</td>
+				<td class="date"></td>
+				<td class="memo">&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="118"></td>
+				<td width="226"></td>
+				<td width="209">참가아티스트상세</td>
+				<td width="72"></td>
+				<td width="399"></td>
+				<td width="72"></td>
+				<td width="72">|</td>
+				<td width="72"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>CURAON 제안하기</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>CURAON 소개</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>CURAON 작품 의뢰하기</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>나의 CURAON</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>제안받은작품</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>↓</td>
+				<td></td>
+			</tr>			
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>상세</td>
+				<td></td>
+				<td></td>
+				<td>08-02</td>
+				<td></td>
+			</tr>			
+			<tr>
+				<td>ARTWORK</td>
+				<td>작품리스트</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>작품상세</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>↓</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>이미지확대</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>08-08</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>ARTISTS</td>
+				<td>아티스트리스트</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td width="72">|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>아티스트상세</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>GALLERIES</td>
+				<td>갤러리리스트</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>AUCTIONS</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>ART BOARD</td>
+				<td>EXHIBITION</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>상세</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>NEWS</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>BOARD</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>상세</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>작성</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>↓</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>ABOUT</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>08-14</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>LOGIN</td>
+				<td>login</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>SIGN UP </td>
+				<td>TYPE</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>약관</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>입력</td>
+				<td>일반회원</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>작가회원</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>↓</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>갤러리회원</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>08-20</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>MY MENU</td>
+				<td>일반회원</td>
+				<td>나의취향</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>ART WORK</td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>ATTIST</td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>구매내역</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>구매한작품</td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>배송중인 작품</td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>서비스 사용내역</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>개인활동 로그</td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>유료서비스 사용 내역</td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>나의 CURAON</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>계정설정</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>작가회원</td>
+				<td>My 작품</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>작품 업로드</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>나의취향</td>
+				<td>ART WORK</td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>ATTIST</td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>판매한 작품</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>서비스 사용내역</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>개인활동 로그</td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>유료서비스 사용 내역</td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>나의 CURAON</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>계정설정</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>갤러리회원</td>
+				<td>작품</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>작품 업로드</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>작가정보</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>작가</td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>작가 등록</td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>서비스 사용내역</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>개인활동 로그</td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>유료서비스 사용 내역</td>
+				<td></td>
+				<td></td>
+				<td>|</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>나의 CURAON</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>↓</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>계정설정</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>08-27</td>
+				<td></td>
+			</tr>
+		</tbody>
+  </table>
+</div>
+
+</body>
+</html>

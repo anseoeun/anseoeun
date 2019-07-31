@@ -1,0 +1,126 @@
+	<!-- header -->
+	<div class="header">  
+		<div class="inner"> 
+			<a href="#none" class="mBtn"><span></span></a>
+			<h1 class="logo"><a href="index.html">로고</a></h1>
+			<div class="gnbMenu"  id="gnbMenuSlider">
+				<ul class="menu">
+					<li><a href="#none">CURAON</a></li>
+					<li class="subHas"><a href="#artworks">ARTWORKS</a></li>
+					<li><a href="#none">ARTISTS</a></li>
+					<li><a href="#none">GALLERIES</a></li>
+					<li><a href="#none">AUCTIONS</a></li>
+					<li class="subHas"><a href="#artboard">ARTBOARD</a></li>
+				</ul>
+			</div>                
+			<div class="headerMenu">
+				<span class="menu">
+					<a href="javascript:void(0)" class="noti mHide"><i></i></a>
+					<a href="javascript:void(0)" class="chat mHide"><i></i></a>
+					<a href="javascript:void(0)" class="user mHide"><i></i></a>
+					<a href="javascript:void(0)" class="search"><i></i></a>
+				</span>
+			</div>
+			<span class="headerSearch">
+				<span class="search"><input type="text" placeholder="Search"> </span>
+				<a href="javascript:void(0)" class="delete"><i></i></a>
+			</span>			
+		</div>
+		<!-- gnbSubMenu -->
+		<div class="gnbSubMenu">
+			<div class="inner">
+				<div class="menu" id="artworks">
+					<ul>
+						<li><a href="javascript:void(0)">PAINTING</a></li>
+						<li><a href="javascript:void(0)">PICTURE</a></li>
+						<li><a href="javascript:void(0)">SCULPTURE</a></li>
+						<li><a href="javascript:void(0)">PRINT&EDITION</a></li>
+					</ul>
+					<ul>
+						<li><a href="javascript:void(0)">WORK ON PAPER</a></li>
+						<li><a href="javascript:void(0)">NEW MEDIA</a></li>
+						<li><a href="javascript:void(0)">MIXED MEDIA</a></li>
+						<li><a href="javascript:void(0)">DESIGN</a></li>
+					</ul>
+				</div>
+				<div class="menu" id="artboard" style="display:none;">
+					<ul>
+						<li><a href="javascript:void(0)">EXHIBITIONS</a></li>
+						<li><a href="javascript:void(0)">NEWS</a></li>
+						<li><a href="javascript:void(0)">BOARD</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- // gnbSubMenu -->			
+	</div>
+	<!-- // header -->
+	
+	<!-- mSlideMenu -->
+	<div class="mSlideMenu">
+		<div class="mask"></div>
+		<div class="inner">
+			<a href="#none" class="close"></a>
+			<div class="scroll">
+				<div class="menuTop">
+					<div class="headerMenu">
+						<span class="menu">
+							<a href="javascript:void(0)" class="noti"><i></i></a>
+							<a href="javascript:void(0)" class="chat"><i></i></a>
+							<a href="javascript:void(0)" class="user"><i></i></a>
+							<a href="javascript:void(0)" class="search"><i></i></a>
+						</span>
+					</div>
+					<span class="headerSearch">
+						<span class="search"><input type="text" placeholder="Search"> </span>
+						<a href="javascript:void(0)" class="delete"><i></i></a>
+					</span>						
+				</div>
+				<!-- mGnbMenu -->
+				<div class="mGnbMenu">
+					<ul>
+						<li><a href="javascript:void(0)">CURAON</a></li>
+						<li class="hasSub"><a href="javascript:void(0)">Artworks</a>
+							<div class="subMenu">
+								<ul>
+									<li><a href="javascript:void(0)">PAINTING</a></li>
+									<li><a href="javascript:void(0)">PICTURE</a></li>
+									<li><a href="javascript:void(0)">SCULPTURE</a></li>
+									<li><a href="javascript:void(0)">PRINT&EDITION</a></li>
+								</ul>
+								<ul>
+									<li><a href="javascript:void(0)">WORK ON PAPER</a></li>
+									<li><a href="javascript:void(0)">NEW MEDIA</a></li>
+									<li><a href="javascript:void(0)">MIXED MEDIA</a></li>
+									<li><a href="javascript:void(0)">DESIGN</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="javascript:void(0)">ARTISTS</a></li>
+						<li><a href="javascript:void(0)">GALLERIES</a></li>
+						<li><a href="javascript:void(0)">AUCTIONS</a></li>
+						<li class="hasSub"><a href="javascript:void(0)">ARTBOARD</a>
+							<div class="subMenu">
+								<ul>
+									<li><a href="javascript:void(0)">EXHIBITIONS</a></li>
+									<li><a href="javascript:void(0)">NEWS</a></li>
+									<li><a href="javascript:void(0)">BOARD</a></li>
+								</ul>	
+							</div>					
+						</li>
+					</ul>
+				</div>
+				<!-- // mGnbMenu -->
+			</div>
+		</div>
+	</div>
+    <!-- // mSlideMenu -->
+    
+    <script>
+        $(function(){
+            headerSearch();
+            wGnbMenu();
+			mGnbMenu();
+			headerScroll();
+        })
+    </script>

@@ -1,0 +1,113 @@
+<div class="mask"></div>
+<a href="javascript:void(0);" class="close"></a>	
+<div class="popWrap">
+	<div class="popup">
+		<div class="popHeader">
+			<b class="tit">CURAON 제안하기</b>
+		</div>
+		<div class="popBody">
+			<div class="popRequestApplyFormArea">
+				<div class="padding">
+					<!-- popLayoutType1 -->
+					<div class="popLayoutType2">
+						<!-- leftArea -->
+						<div class="leftArea">
+							<div class="workImgUpload">
+								<div class="panzoom-parent">
+									<div class="panzoom">
+										<div class="img" id="capture">
+										<div class="frameBox" style="width:50%;height:50%;top:15%;left:25%;"><img src="../images/temp/temp_artWorkList_1.png" alt=""></div>
+										<img src="../images/temp/temp_workDetail.png" alt=""/>
+										</div>
+									</div>
+								</div>
+							</div>
+								<div id="test"></div>				
+						</div>
+						<!-- // leftArea -->
+						<!-- rightArea -->
+						<div class="rightArea">
+							<div class="workUploadMenu">
+								<div class="workUploadBtn">
+									<p class="titType3"><b>작품 업로드</b></p>
+									<a href="javascript:void(0);" class="btn"><i class="ico iPlus"></i><span>작품선택</span></a>
+									<p class="txt">가로 최대 1920px, 세로 최대 1920px 초과 이미지는 제한됩니다.</p>
+								</div>
+								<div class="controlMenu">
+									<b class="tit">CONTROL</b>
+									<div class="menu">
+										<a href="javascript:void(0);" class="zoom-in"><i class="ico iZoomin"></i></a>
+										<a href="javascript:void(0);" class="zoom-out"><i class="ico iZoomout"></i></a>
+										<a href="javascript:void(0);" class="reset"><i class="ico iReset"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- // rightArea -->
+		
+						<script src="../js/jquery.panzoom.js"></script>
+						<script>
+							$(function(){
+								var $section = $('.workImgUpload');
+								var $control = $('.controlMenu');
+								$section.find('.panzoom').panzoom({
+								$zoomIn: $control.find(".zoom-in"),
+								$zoomOut: $control.find(".zoom-out"),
+								$reset: $control.find(".reset"),
+								startTransform: 'scale(1)',
+								increment: 0.1,
+								minScale: 1,
+								contain: 'automatic'
+								}).panzoom('zoom');
+		
+								$('.reset').click();
+							});
+						</script>
+		
+						<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+						<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>							
+		
+						<script type="text/javascript">
+							function capture() {
+								
+								//$('#capture').width(550);
+								var background = document.getElementById('capture').style.background;
+								if(background == "") {
+									document.getElementById('capture').style.background = "#fff"; 
+								}
+								setTimeout(function(){
+								html2canvas(document.getElementById('capture'), {
+									useCORS: true, // 다른사이트의리소스가있을때활성화(그러나...Access-Control-Allow-Origin 필요)
+									onrendered: function(canvas) {
+										canvas.toBlob(function(blob) {
+											saveAs(blob, 'download.png');
+										});
+										
+										$("#test").html('<img src=' + canvas.toDataURL("image/png") + '>');
+									}
+								});
+								}, 500)
+							}
+						</script>
+					</div>
+					<!-- // popLayoutType1 -->
+		
+					<div class="suggestInput">
+						<textarea>공간 특성상 강한 컬러보다는 부드러운 컬러가 어울릴 것 같아 이렇게 작업해보았습니다. 공간 특성상 강한 컬러보다는 부드러운 컬러가 어울릴 것 같아 이렇게 작업해보았습니다. 공간 특성상 강한 컬러보다는 부드러운 컬러가 어울릴 것 같아 이렇게 작업해보았습니다. 공간 특성상 강한 컬러보다는 부드러운 컬러가 어울릴 것 같아 이렇게 작업해보았습니다. 공간 특성상 강한 컬러보다는 부드러운 컬러가 어울릴 것 같아 이렇게 작업해보았습니다.</textarea>
+					</div>
+		
+					<div class="btnBox alignC">
+						<div class="cellbox cell2 wAutoW m100W">
+							<div class="cell">
+								<a href="javascript:void(0);" class="btnType1 btn2 m100W">취소</a>
+							</div>
+							<div class="cell">
+								<a href="javascript:void(0);" class="btnType1 btn1 m100W" onclick='capture();'>작품제안</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>		
