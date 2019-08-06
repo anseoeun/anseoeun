@@ -9,15 +9,17 @@
 			<!-- popCuraonIntroArea -->
 			<div class="popCuraonIntroArea">
 				<div class="padding">
-					<div class="introMovie">
-						<video poster="../images/preload.png" id="videoPlayer" >
-							<source src="../video/video.mp4" type="video/mp4">
+					<div class="introMovie">	
+						<video controls preload poster="../images/preload.png" id="videoPlayer" >
+							<source src="http://www.ithinknext.com/mydata/board/files/F201308021823010.mp4" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
+
 						<script type="text/javascript">
 							$(function(){
 								// video
-								$('video').click(function() {
+								var video = document.getElementById("videoPlayer"); 
+								$(video).click(function() {
 									if ($(this).get(0).paused) {
 									$(this).get(0).play();
 									$(this).attr('controls', 'controls');
@@ -26,6 +28,12 @@
 									$(this).get(0).pause();
 									}
 								});
+								$('#curaonIntro').find('.close, .mask').on('click', function(){
+									if(video != undefined || video != null){
+										video.load();
+									}
+								});
+
 								
 							});
 						</script>

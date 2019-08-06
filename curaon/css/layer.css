@@ -42,10 +42,14 @@ body.openPop{overflow: hidden;}
     .layerPopup .popWrap{height:100%;width:100%;}
     .layerPopup .popWrap .popup{height:100%;width:100%;overflow-x:hidden;overflow-y: auto;}
     .layerPopup .popWrap .popup .padding{padding:0 20px;}
-    .layerPopup .popHeader{padding-left:20px;}
+    .layerPopup .popHeader{padding-left:20px;padding-right:20px;}
     .layerPopup .popHeader .tit{font-size:26px;}
     .layerPopup .popBody:after{height:20px;}
     .popLayoutType1 .leftArea{float:none;width:auto;padding:0 0;}
     .popLayoutType2 .leftArea{float:none;width:auto;padding:0 0;}
     .popLayoutType2 .rightArea{float:none;width:auto;padding:0 0;}
+}
+
+@media screen and (max-width:480px){
+    .layerPopup .popHeader .right{margin-top:15px;}
 }

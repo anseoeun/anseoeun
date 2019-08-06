@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=no">
+
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<link type="text/css" rel="stylesheet" href="../css/swiper.min.css" />
+<script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" language="javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" language="javascript" src="../js/ux.js"></script>
+
+ <style type="text/css">
+	#div1 {position:relative;width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+	#drag1 {position:relative;position:absolute;bottom:0;left:0;width:50px;height:50px;background:red}
+</style>
+</head>
+<body>
+
+		<div id="drag1"></div>
+	   
+		<script type="text/javascript">
+		 var el = document.getElementById('drag1'); 
+	   
+		 el.addEventListener("touchstart", handleStart, false);
+		 el.addEventListener("touchend", handleEnd, false);
+		//  el.addEventListener("touchcancel", handleCancel, false);
+		//  el.addEventListener("touchleave", handleEnd, false);
+		el.addEventListener("touchmove", handleMove, false);
+	   
+	   var first = 0;
+	   var move = 0;
+	   var pos =0;
+		 function handleStart(e) {
+			 // Handle the start of the touch
+			 first = e.touches[0].pageY
+			 console.log('first : ' + first)
+		 }
+		 function handleMove(e) {
+			 move = first - e.touches[0].pageY
+			 console.log(move)
+			 $(el).css({bottom:pos + move})
+		 }
+		 function handleEnd(e) {
+			 pos = pos + move
+		 }
+
+	   
+		 // ^ Do the same for the rest of the events
+	   
+	   </script>
+
+</html>

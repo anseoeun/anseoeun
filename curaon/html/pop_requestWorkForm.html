@@ -139,7 +139,7 @@
 										var resizeId;
 										$(window).resize(function(){
 											clearTimeout(resizeId);
-											if(undefined != undefined){
+											if(jcrop_api != undefined){
 												jcrop_api.destroy();
 												$('.imgSetting img').attr('style', '');
 												resizeId =setTimeout(initJcrop,500);
@@ -171,6 +171,17 @@
 											});
 		
 											setBoxSize();
+											//$('.layerPopup .popWrap').css('overflow', 'hidden');
+											//$('.layerPopup .popWrap .popup').css('overflow', 'hidden');
+											$('.jcrop-holder > div > div > .jcrop-tracker').click();
+
+											//alert($('.jcrop-holder > div > div').eq(1).html())
+											setTimeout(function(){
+												//$('.jcrop-holder > div > div > .jcrop-tracker').show();
+											$(document).on('touch', '.imgSetting', function(e){
+												alert('a')
+											});
+										}, 1000)
 									
 										};
 		
@@ -213,7 +224,6 @@
 									
 										w = $('#boxW').val();
 										h = $('#boxH').val();        
-										//$('.jcrop-holder > div > div .jcrop-tracker').css({'font-size':'30px', 'font-weight':'bold', 'color':'#999', 'text-align':'center'})
 										
 										$('.jcrop-holder .size').text(w + ' X ' + h);
 									
@@ -259,7 +269,7 @@
 								</div>
 		
 								<div class="imgSettingMenu">
-									<a href="#none" class="txtlink"><span>사이즈는 어떻게 정하나요?</span></a>
+									<a href="#none" class="txtlink" style="cursor:move;"><span>사이즈는 어떻게 정하나요?</span></a>
 									<div class="inputList cellbox cell2">
 										<div class="inputBox cell">
 											<p class="titType4"><b>가로 사이즈</b></p>

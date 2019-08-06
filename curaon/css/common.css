@@ -54,14 +54,12 @@ img,fieldset, frameset, frameborder, frame{border:0;border:none;}
 table{width:100%;border-collapse:collapse;}
 table th, table td{box-sizing:content-box;}
 a, img, span, b, input, select, em, textarea, label, strong{vertical-align:middle;outline-style:none;color:inherit;font-family:inherit}
-img{max-width:100%;max-height:100%}
 a{color:inherit;text-decoration:none;cursor:pointer;color:inherit;font-family:inherit;}
 a:hover{text-decoration:none}
 textarea{resize:none;}
 button{border:none;background:none;outline:none;cursor:pointer;}
 label,button{cursor:pointer;}
 i,em{font-style:normal;}
-img{max-width:100%;max-height:100%;}
 br{line-height:inherit;}
 hr{border:none;line-height:inherit;}
 input[type="text"], input[type="password"], input[type="file"], textarea{height:30px;padding:0.33rem;color:#7b7b7b;-webkit-appearance:none;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;border-radius:0;border:1px solid #ccc;background:#ffffff;}
@@ -98,6 +96,7 @@ textarea{height:auto}
 .cellbox .cell{display:table-cell;width:10px;vertical-align: middle;}
 .cellbox .cell.auto{width:auto;}
 .cellbox.cell2 > .cell{width:50%;}
+.cellbox.cell3 > .cell{width:33.3333%;}
 .cellbox.auto{width:auto;}
 .cellbox.auto .cell{width:auto;}
 
@@ -155,6 +154,12 @@ textarea{height:auto}
 .btnType2.btn1{color: #ffffff;border: 1px solid #4d2672;background:#4d2672;}
 .btnType2.btn2{color: #4d2672;border: 1px solid #4d2672;background:#ffffff;}
 .btnType2 .ico{margin-right:10px;}
+
+.btnType3{display:inline-block;max-width:100%;padding:0 25px;height:40px;line-height:38px;font-size:14px;text-align: center;white-space: nowrap;}
+.btnType3.btn1{color: #ffffff;border: 1px solid #4d2672;background:#4d2672;}
+.btnType3.btn2{color: #4d2672;border: 1px solid #4d2672;background:#ffffff;}
+.btnType3 .ico{margin-right:10px;}
+.btnType3 span{display:inline-block;vertical-align:baseline;}
 @media screen and (max-width:1024px){
 	.btnType1{min-width:0;height:40px;width:110px;line-height:37px;font-size:14px;}
 }
@@ -162,17 +167,27 @@ textarea{height:auto}
 
 .ico{display:inline-block;}
 .ico.iChat {width:18px;height:18px;background:url('../images/ico_chat.png') no-repeat 0 0;background-size:100% 100%;}
+.ico.iChat2 {width:14px;height:12px;background:url('../images/ico_chat2.png') no-repeat 0 0;background-size:100% 100%;}
+.ico.iCart {width:27px;height:26px;background:url('../images/ico_cart.png') no-repeat 0 0;background-size:100% 100%;}
 .ico.iPlus {width:11px;height:11px;background:url('../images/ico_plus.png') no-repeat 0 0;background-size:100% 100%;}
 .ico.iZoomin {width:15px;height:15px;background:url('../images/ico_zoomin.png') no-repeat 0 0;background-size:100% 100%;}
 .ico.iZoomout {width:15px;height:15px;background:url('../images/ico_zoomout.png') no-repeat 0 0;background-size:100% 100%;}
 .ico.iReset {width:19px;height:23px;background:url('../images/ico_reset.png') no-repeat 0 0;background-size:100% 100%;}
 .ico.iWarning {width:16px;height:13px;background:url('../images/ico_warning.png') no-repeat 0 0;background-size:100% 100%;}
 .ico.iHeart {width:24px;height:22px;background:url('../images/ico_heart.png') no-repeat 0 0;background-size:100% 100%;}
+.ico.iHeart2 {width:14px;height:12px;background:url('../images/ico_heart2.png') no-repeat 0 0;background-size:100% 100%;}
 .ico.iView {width:25px;height:18px;background:url('../images/ico_view.png') no-repeat 0 0;background-size:100% 100%;}
 .ico.iView2 {width:16px;height:12px;background:url('../images/ico_view2.png') no-repeat 0 0;background-size:100% 100%;}
 .ico.iView2_off {width:16px;height:12px;background:url('../images/ico_view2_off.png') no-repeat 0 0;background-size:100% 100%;}
 .ico.iTrash {width:22px;height:24px;background:url('../images/ico_trash.png') no-repeat 0 0;background-size:100% 100%;}
 .ico.iTrash2 {width:14px;height:16px;background:url('../images/ico_trash2.png') no-repeat 0 0;background-size:100% 100%;}
+.ico.iFilter {width:14px;height:12px;background:url('../images/ico_filter.png') no-repeat 0 0;background-size:100% 100%;}
+.ico.iSearch {width:20px;height:20px;background:url('../images/ico_search.png') no-repeat 0 0;background-size:100% 100%;}
+.ico.iShare {width:14px;height:14px;background:url('../images/ico_share.png') no-repeat 0 0;background-size:100% 100%;}
+.ico.iInfo {width:18px;height:18px;background:url('../images/ico_info.png') no-repeat 0 0;background-size:100% 100%;}
+.ico.iImg {width:32px;height:27px;background:url('../images/ico_img.png') no-repeat 0 0;background-size:100% 100%;}
+.ico.iDelivery {width:32px;height:31px;background:url('../images/ico_delivery.png') no-repeat 0 0;background-size:100% 100%;}
+.ico.iCertification {width:32px;height:33px;background:url('../images/ico_certification.png') no-repeat 0 0;background-size:100% 100%;}
 
 .starGrade{display:inline-block;}
 .starGrade i {display:inline-block;width:21px;height:20px;background:url('../images/ico_star.png') no-repeat 100% 0;background-size:auto 100%;}
@@ -181,6 +196,7 @@ textarea{height:auto}
 .starGrade.small i{width:16px;height:15px;}
 .starGrade.small i.half {background-position: -17px 0;}
 .starGradeNum{margin-left:8px;font-size:16px;}
+
 
 /* 
 .noDataBox{position:relative;height:413px;border: 1px solid #e6e7e9;}
@@ -217,6 +233,11 @@ textarea{height:auto}
 .inpType1 input{height:40px;width:100%;padding:0 10px;border:none;font-size:14px;color: #000000;}
 .inpType1 .unit{padding:0 15px !important;white-space:nowrap;color: #999999;}
 
+.searchInput{}
+.searchInput .sch{display:block;position:relative;padding-right:40px;}
+.searchInput input{width:100%;height:40px;padding:0 10px;border:1px solid #e5e5e5;font-size:14px;}
+.searchInput .btn{overflow: hidden;position:absolute;top:0;right:0;width:40px;height:40px;line-height:40px;text-align: center;background:#4d2672;}
+
 .selectType1{position:relative;display:block;height:40px;}
 .selectType1 .design{position:absolute;top:0;left:0;width:100%;height:40px;padding:0 10px;line-height:38px;text-align:left;font-size:14px;color:#000000;border:1px solid #e5e5e5;background:#ffffff;}
 .selectType1 .design:after{content:""; display: block;position:absolute;top:50%;right:13px;width:0px;height:0px;margin-top:-3px;cursor:pointer;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #4d2672;}
@@ -237,6 +258,20 @@ textarea{height:auto}
 .inpRadio .inp .ic{display:block;overflow:hidden;position:absolute;top:0;left:0;width:100%;height:100%;border-radius:16px;background:url('../images/ico_inp_radio.png') no-repeat 0 0;background-size:auto 16px;}
 .inpRadio .inp input:checked  + .ic{background-position-x:-16px;}
 .inpRadio .txt{display:inline-block;margin-left:5px;font-size:14px;}
+
+.inpRadio2 {display:block;position:relative;}
+.inpRadio2 input{opacity:0;position:absolute;top:0;left:0;}
+.inpRadio2 .txt{overflow: hidden;display:block;height:40px;line-height:38px;text-align:center;border:1px solid #e5e5e5;font-size:14px;vertical-align:baseline;height:40px;}
+.inpRadio2 input:checked + .txt{position:relative;border:1px solid #4d2672;font-weight:bold;color: #4d2672;z-index:10}
+
+
+
+.inpCheck{display:inline-block;cursor:pointer;white-space:nowrap;}
+.inpCheck .inp{display:inline-block;position:relative;width:16px;height:16px;}
+.inpCheck .inp input{opacity:0;position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;}
+.inpCheck .inp .ic{display:block;overflow:hidden;position:absolute;top:0;left:0;width:100%;height:100%;background:url('../images/ico_inp_check.png') no-repeat 0 0;background-size:auto 16px;}
+.inpCheck .inp input:checked  + .ic{background-position-x:-16px;}
+.inpCheck .txt{display:inline-block;margin-left:5px;font-size:14px;margin-top:-1px;}
 
 
 /* text */
@@ -260,11 +295,7 @@ textarea{height:auto}
 .txtlink{font-size:11px;color: #000000;}
 .txtlink span{text-decoration:underline;}
 
-
 @media screen and (max-width:1024px){
-	.mainContent{width:100%;padding:0 20px;padding-bottom:80px;}
-	.content{min-height:200px;width:auto;padding-top:0;padding-bottom:60px;}
-
 	.titType1 {text-align: center;}
 	.titType1 b {font-size:22px;letter-spacing: -0.05em;}
 }
@@ -277,6 +308,9 @@ textarea{height:auto}
 .tabType1 ul li a {position:relative;display:block;height:50px;min-width:120px;padding:0 20px;line-height:50px;font-size:18px;color: #999999;font-weight:500;text-align: center;}
 .tabType1 ul li.on a {color: #4d2672;}
 .tabType1 ul li.on a:after{content:'';display:block;position:absolute;bottom:0;left:0;width:100%;height:3px;background:#4d2672;}
+@media screen and (max-width:1024px){
+	.tabType1 ul li a {height:42px;line-height:42px;font-size:16px;}
+}
 
 .tabType2{margin-top:40px;overflow: hidden;}
 .tabType2 ul:after{content:'';display:block;clear:both;}
