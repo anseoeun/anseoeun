@@ -188,6 +188,8 @@ textarea{height:auto}
 .ico.iImg {width:32px;height:27px;background:url('../images/ico_img.png') no-repeat 0 0;background-size:100% 100%;}
 .ico.iDelivery {width:32px;height:31px;background:url('../images/ico_delivery.png') no-repeat 0 0;background-size:100% 100%;}
 .ico.iCertification {width:32px;height:33px;background:url('../images/ico_certification.png') no-repeat 0 0;background-size:100% 100%;}
+.ico.iHome {width:12px;height:12px;background:url('../images/ico_home.png') no-repeat 0 0;background-size:100% 100%;}
+.ico.iFacebook {width:6px;height:12px;background:url('../images/ico_facebook.png') no-repeat 0 0;background-size:100% 100%;}
 
 .starGrade{display:inline-block;}
 .starGrade i {display:inline-block;width:21px;height:20px;background:url('../images/ico_star.png') no-repeat 100% 0;background-size:auto 100%;}

@@ -1010,3 +1010,32 @@
 	.galleryListArea {padding:20px 20px 0 20px;}
 	.galleryListArea .galleryList li{width:50%;}
 }
+
+.galleryDetailInfo{}
+.galleryDetailInfo .galleryInfo {padding-bottom:35px;border-bottom:1px solid #e0e0e0;}
+.galleryDetailInfo .galleryInfo .img {float:left;width:192px;height:138px;margin-right:30px;background:#e7e7e7;}
+.galleryDetailInfo .galleryInfo .img img {width:100%;height:100%;}
+.galleryDetailInfo .galleryInfo .desc {overflow: hidden;height:138px;display:table-cell;vertical-align:middle;}
+.galleryDetailInfo .galleryInfo .desc .top {}
+.galleryDetailInfo .galleryInfo .desc .top .engName {font-size:32px;color: #333333;vertical-align:baseline;}
+.galleryDetailInfo .galleryInfo .desc .top .koName {margin-left:5px;vertical-align:baseline;font-size:16px;color: #333333;}
+.galleryDetailInfo .galleryInfo .desc .top .addres {margin-top:10px;font-size:14px;color: #999999;}
+.galleryDetailInfo .galleryInfo .desc .top .menu {display:block;margin-top:20px;}
+.galleryDetailInfo .galleryInfo .desc .top .menu .website {display:inline-block;}
+.galleryDetailInfo .galleryInfo .desc .top .menu .snslink {margin-left:15px;}
+.galleryDetailInfo .galleryInfo .desc .top .menu .ico{margin-right:5px;}
+.galleryDetailInfo .galleryInfo .desc .top .menu a {font-size:12px;color: #999999;text-decoration:underline;font-weight:200;}
+.galleryDetailInfo .galleryInfo .about {margin-top:30px;}
+.galleryDetailInfo .galleryInfo .about .title{font-size:18px;color: #333;font-weight:bold;}
+.galleryDetailInfo .galleryInfo .about .txt{margin-top:15px;line-height:1.5em;color:#333;font-size:13px;font-weight:200;}
+
+.galleryDetailInfo .galleryArtistInfo {padding:35px 0;border-bottom:1px solid #e0e0e0;}
+.galleryDetailInfo .galleryArtistInfo:after{content:'';display:block;clear:both;}
+.galleryDetailInfo .galleryArtistInfo .cellbox .cell{vertical-align:top;}
+.galleryDetailInfo .galleryArtistInfo .left {width:715px;}
+.galleryDetailInfo .galleryArtistInfo .right {width:auto;padding-left:30px;border-left:1px solid #e0e0e0;}
+.galleryDetailInfo .galleryArtistInfo .title{margin-bottom:25px;font-size:18px;color: #333;font-weight:bold;}
+.galleryDetailInfo .galleryArtistInfo .list {margin-top:-12px;}
+.galleryDetailInfo .galleryArtistInfo .list:after{content:'';display:block;clear:both;}
+.galleryDetailInfo .galleryArtistInfo .list li {float:left;width:25%;margin-top:15px;font-size:13px;color: #333;font-weight:200;}
+.galleryDetailInfo .galleryArtistInfo .right .list li {width:40%;}
