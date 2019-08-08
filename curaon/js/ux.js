@@ -167,23 +167,31 @@ function mGnbMenu(){
 //mainVisualSlider
  function mainVisualSlider(){
 	 if($('#mainVisualSlider').length < 0) return;
-	 if($('#mainVisualSlider li').length>0){
-			var mainVisualSlider = new Swiper('#mainVisualSlider', {
-			  slidesPerView: 1,
-			  pagination: {
-				el: '#mainVisualSlider .swiper-pagination',
-				clickable: true,
-			  },
-			navigation: {
-				nextEl: '#mainVisualSlider .swiper-button-next',
-				prevEl: '#mainVisualSlider .swiper-button-prev',
-				clickable:true,
-			  },
-				autoplay: {delay:5000, disableOnInteraction:false},
-				loop: true,			  
-				speed:1000
-			});
-	  }
+	 if($('#mainVisualSlider li').length<=1) return;
+	
+	 var viewnum = 1;
+	 if($('#mainVisualSlider').data('viewnum') != undefined) {
+		viewnum = $('#mainVisualSlider').data('viewnum');
+		console.log(viewnum, $('#mainVisualSlider li').length)
+		if($('#mainVisualSlider li').length<=viewnum) return;
+	 }
+
+	var mainVisualSlider = new Swiper('#mainVisualSlider', {
+		slidesPerView: viewnum,
+		pagination: {
+		el: '#mainVisualSlider .swiper-pagination',
+		clickable: true,
+		},
+	navigation: {
+		nextEl: '#mainVisualSlider .swiper-button-next',
+		prevEl: '#mainVisualSlider .swiper-button-prev',
+		clickable:true,
+		},
+		autoplay: {delay:5000, disableOnInteraction:false},
+		loop: true,			  
+		speed:1000
+	});
+
  }
 
  function workDetailVisual(){
