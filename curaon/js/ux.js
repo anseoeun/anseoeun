@@ -208,7 +208,13 @@ function mGnbMenu(){
 	},
 	   autoplay: {delay:5000, disableOnInteraction:false},
 	   loop: true,			  
-	   speed:1000
+	   speed:1000,
+	   breakpoints: {
+		768: {
+			slidesPerView: 1,
+			spaceBetween:0
+			}
+		}
    });
 
 }
