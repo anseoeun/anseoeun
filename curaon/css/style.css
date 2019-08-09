@@ -1039,3 +1039,47 @@
 .galleryDetailInfo .galleryArtistInfo .list:after{content:'';display:block;clear:both;}
 .galleryDetailInfo .galleryArtistInfo .list li {float:left;width:25%;margin-top:15px;font-size:13px;color: #333;font-weight:200;}
 .galleryDetailInfo .galleryArtistInfo .right .list li {width:40%;}
+
+
+.exhivitionSlider{margin-top:30px;}
+.exhivitionSlider:after{content:'';display:block;clear: both;}
+.exhivitionSlider ul {margin-left:-30px;}
+.exhivitionSlider ul li{float:left;width:50%;height:auto;padding-left:30px;}
+.exhivitionSlider .swiper-container-horizontal ul{margin-left:0;}
+.exhivitionSlider .swiper-container-horizontal ul li{padding-left:0;}
+
+.exhivitionSlider .swiper-button-prev {opacity:0;position:absolute;top:50%;left:-54px;width:24px;height:44px;background:url('../images/btn_slider.png') no-repeat 0 0;transition: opacity 0.5s ease;-webkit-transition: opacity 0.5s ease;}
+.exhivitionSlider .swiper-button-next {opacity:0;position:absolute;top:50%;right:-54px;width:24px;height:44px;background:url('../images/btn_slider.png') no-repeat -24px 0;transition: opacity 0.5s ease;-webkit-transition: opacity 0.5s ease;}
+.exhivitionSlider:hover .swiper-button-prev,
+.exhivitionSlider:hover .swiper-button-next{opacity:1;}
+
+.exhivitionWork {}
+.exhivitionWork .img {}
+.exhivitionWork .img img {width:100%;}
+.exhivitionWork .desc {position:relative;padding:15px 0;}
+.exhivitionWork .desc > a{display:block;}
+.exhivitionWork .desc .menu {position:absolute;top:15px;right:0;}
+.exhivitionWork .desc .menu a{display:inline-block;margin-left:18px;}
+.exhivitionWork .desc .menu a:first-child{margin-left:0;}
+.exhivitionWork .desc .menu .ico{margin-right:4px;}
+.exhivitionWork .desc .menu .ico .num{margin-right:4px;font-size:14px;color: #333333;}
+.exhivitionWork .desc .title {display:block;padding-right:100px;font-size:16px;color: #333333;font-weight:bold;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+.exhivitionWork .desc .info {margin-top:5px;font-size:14px;color: #999999;font-weight:200;}
+.exhivitionWork .desc .info .name {display:inline-block;}
+.exhivitionWork .desc .info .date{display:inline-block;position:relative;padding-left:7px;margin-left:6px;}
+.exhivitionWork .desc .info .date:before{content:'';display:block;width:1px;height:10px;position:absolute;top:50%;left:0;margin-top:-4px;background:#b4b4b4;}
+.exhivitionWork .desc .starGradeWrap {margin-top:10px;}
+.exhivitionWork .desc .starGradeWrap .grade {margin-left:10px;}
+.exhivitionWork .desc .starGradeWrap .grade:first-child{margin-left:0;}
+.exhivitionWork .desc .starGradeWrap .grade .label {display:inline-block;padding:2px 0;margin-right:3px;font-size:12px;color: #bbbbbb;vertical-align:middle;}
+.exhivitionWork .desc .starGradeWrap .grade .starGrade{vertical-align:middle;}
+
+.exhibitionListArea .exhivitionList{padding-top:30px;margin-top:30px;border-top:1px solid #cccccc;}
+.exhivitionList ul{margin:-30px 0 0 -24px;}
+.exhivitionList ul:after{content:'';display:block;clear: both;}
+.exhivitionList li{float:left;width:33.3333%;margin-top:30px;padding-left:24px;}
+.exhivitionList .exhivitionWork .desc .starGradeWrap .grade:nth-child(2){float:right;}
+@media screen and (max-width:1024px){
+	.exhivitionSlider .swiper-button-prev,
+	.exhivitionSlider .swiper-button-next {display:none !important;}
+}
