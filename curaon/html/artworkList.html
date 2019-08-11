@@ -189,38 +189,40 @@
 										
 										var i = rects.length;
 										var colorwheelNum =[] ;
-
-										rects.on("mouseover", function(e) {
-											console.log($(this).index())
-											if($(this).index() < rectsTotal-1){
-												colorpan.append($(this));
-												var color = $(this).attr('color');
-												$(this).css({'stroke':color})
-												$(this).css({'stroke-width':'5px'})
-												$(this).attr('stroke-width','5px')												
-											}
-										});
-										rects.on("mouseout", function(e) {
-											$("#colorpan path, #colorpan rect").css({'stroke':''})
-											$("#colorpan path, #colorpan rect").css({'stroke-width':'0px'});
-										});
 										
-										rects.on("click", function(e) {
-											var num =$(this).attr('class').split('t')[1];
-											var cNum = $(this).attr('color');
-													
-											//$('#pointer path').hide();
-											if($('.pointer'+num).is(':hidden')) {
-												$('.pointer'+num).show();
-												colorwheelNum.push(cNum)
-											}else{
-												$('.pointer'+num).hide();
-												colorwheelNum.splice(colorwheelNum.indexOf(cNum),1);
+										var filter = "win16|win32|win64|mac";
+											if (navigator.platform && filter.indexOf(navigator.platform.toLowerCase()) >= 0) {
+												rects.on("mouseover", function(e) {
+													if($(this).index() < rectsTotal-1){
+														colorpan.append($(this));
+														var color = $(this).attr('color');
+														$(this).css({'stroke':color})
+														$(this).css({'stroke-width':'5px'})
+														$(this).attr('stroke-width','5px')												
+													}
+												});
+												rects.on("mouseout", function(e) {
+													$("#colorpan path, #colorpan rect").css({'stroke':''})
+													$("#colorpan path, #colorpan rect").css({'stroke-width':'0px'});
+												});
 											}
 
-											//alert(colorwheelNum);
+											rects.off('click');
+											rects.on("click", function(e) {
+												var num =$(this).attr('class').split('t')[1];
+												var cNum = $(this).attr('color');
+														
+												if($('.pointer'+num).css('display') != 'inline') {
+													$('.pointer'+num).show();
+													colorwheelNum.push(cNum)
+												}else{
+													$('.pointer'+num).hide();
+													colorwheelNum.splice(colorwheelNum.indexOf(cNum),1);
+												}
 
-										});
+												//alert(colorwheelNum);
+
+											});
 										
 										</script>
 									</div>
@@ -352,6 +354,7 @@
 
 				</div>
 				<!-- // artWorkArea -->
+
 			</div>
 		</div>
 		<!-- // content -->

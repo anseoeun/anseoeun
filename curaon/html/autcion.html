@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=no">
+
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<link type="text/css" rel="stylesheet" href="../css/swiper.min.css" />
+<script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" language="javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" language="javascript" src="../js/ux.js"></script>
+
+</head>
+<body>
+
+<!-- wrap -->
+<div class="wrap wide">
+
+	<script>
+		$(function(){
+			$.ajax({
+				url: 'header.html', 
+				dataType: 'html',
+				success: function(result){
+					$('.wrap').prepend(result);
+				}
+			}); 
+		});
+	</script>
+
+	<!-- ////////////////////////////////////////// container start//////////////////////////////////////////-->
+	<div class="container">	
+		<!-- content -->
+		<div class="content pd0">
+			<div class="autcionArea">
+				<div class="commingSonn">
+					<span class="labelTxt">AUCTIONS</span>
+					<b class="mainTxt">We're coming soon</b>
+					<p class="text">
+						소장하신 작품을 경매로 위탁하여, 많은 입찰을 통해 판매해보세요!
+					</p>
+					<div class="time">
+						<div class="num">
+							<b>00</b>
+							<span>HOURS</span>
+						</div>
+						<div class="colon">:</div>
+						<div class="num">
+							<b>00</b>
+							<span>MINUTES</span>
+						</div>
+						<div class="colon">:</div>
+						<div class="num">
+							<b>00</b>
+							<span>HOURS</span>
+						</div>
+					</div>
+					<div class="btnBox">
+						<a href="javascript:void(0);" class="btnType1 btn1 noMobile">문의하기</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- // content -->
+	</div>
+	<!-- ////////////////////////////////////////// container end //////////////////////////////////////////-->
+
+	<script>
+		$(function(){
+			$.ajax({
+				url: 'footer.html', 
+				dataType: 'html',
+				success: function(result){
+					$('.wrap').append(result);
+				}
+			}); 
+		});
+	</script>
+
+</div>
+<!-- // wrap -->
+
+</body>
+
+</html>

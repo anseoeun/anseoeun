@@ -14,38 +14,130 @@
 <script type="text/javascript" language="javascript" src="../js/ux.js"></script>
 
  <style type="text/css">
-	#div1 {position:relative;width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
-	#drag1 {position:relative;position:absolute;bottom:0;left:0;width:50px;height:50px;background:red}
+ .wrap{overflow: hidden;height:100%;position:fixed;top:0;left:0;width:100%;height:100%;background:gray;}
+ .wrap .text{position:absolute;top:0;left:0;}
+ .wrap .text2{position:absolute;top:20px;left:0;}
+ 
+	
+	#drag1 {position:absolute;bottom:0;left:0;width:100%;padding:0 20px;background:red}
+	#drag1 .fixDiv{height:30px;background: green;}
+	#drag1 .scroll{position:relative;height:200px;overflow-x: hidden;overflow-y:auto;background:#fff;z-index:200;-webkit-overflow-scrolling: auto;}
+	
 </style>
 </head>
 <body>
 
-		<div id="drag1"></div>
+		<div class="wrap">
+			<div class="text"></div>
+			<div class="text2"></div>
+			<div id="drag1">
+				<div class="fixDiv">fixDiv</div>
+				<div class="scroll">
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+					scrollArea <br>
+				</div>
+			</div>
+		</div>
 	   
 		<script type="text/javascript">
-		 var el = document.getElementById('drag1'); 
-	   
-		 el.addEventListener("touchstart", handleStart, false);
-		 el.addEventListener("touchend", handleEnd, false);
+		// var el = document.getElementById('drag1'); 
+		 var handle = $('#drag1 .fixDiv');
+		 var el = $('#drag1');
+		 
+		 el.on('touchstart', handleStart)
+		 el.on('touchend', handleEnd)
+		 el.on('touchmove', handleMove)
+		 $('.scroll').on('touchstart touchmove touchend', function(e){
+			e.stopPropagation(); 
+			
+
+			$('.text').text($('.scroll').scrollTop())
+			$('.text2').text(e.touches[0].clientY)
+		 })
+		 
+		 $('.scroll').on('touchmove', function(e){
+
+		 })
+		 
+		 
+		
+		
+		
+		// el.addEventListener("touchstart", handleStart, false);
+		 //el.addEventListener("touchend", handleEnd, false);
+		 //el.addEventListener("touchmove", handleMove, false);
 		//  el.addEventListener("touchcancel", handleCancel, false);
 		//  el.addEventListener("touchleave", handleEnd, false);
-		el.addEventListener("touchmove", handleMove, false);
+		
 	   
 	   var first = 0;
 	   var move = 0;
 	   var pos =0;
 		 function handleStart(e) {
+			e.stopPropagation();
 			 // Handle the start of the touch
-			 first = e.touches[0].pageY
+			 first = e.touches[0].clientY
 			 console.log('first : ' + first)
 		 }
 		 function handleMove(e) {
-			 move = first - e.touches[0].pageY
+			e.stopPropagation();
+			 move = first - e.touches[0].clientY
+			 
+			 if(move < 0) {} //down
+			 else{} //up
+
 			 console.log(move)
 			 $(el).css({bottom:pos + move})
 		 }
 		 function handleEnd(e) {
+			e.stopPropagation();
 			 pos = pos + move
+			 
 		 }
 
 	   

@@ -16,8 +16,12 @@ $(function(){
 	workImgMoreSlider();
 	//아트워크작품상세 더보기 이미지
 	artworkImgMoreSlider();
+	//전시상세 더보기 이미지
+	exhibitionImgMoreSlider();
 	//참고이미지
 	referenceSlider();
+	// 탭슬라이더
+	tabType3Slider();
 	//사진 올리기 
 	// photoAddListSlider('#photoAddListSlider');
 	// photoAddListSlider('#photoAddListSlider2');
@@ -483,6 +487,44 @@ function artworkImgMoreSlider(){
 	});
 }
 
+
+function exhibitionImgMoreSlider(){
+	sliderSwiper({
+		obj:'#exhibitionImgMoreSlider',
+		sliderSetting:{
+			slidesPerView: 'auto',
+			spaceBetween:8,
+			navigation: {
+				nextEl: '#exhibitionImgMoreSlider .swiper-button-next',
+				prevEl: '#exhibitionImgMoreSlider .swiper-button-prev',
+				clickable:true,
+			},
+			breakpoints: {
+				1024: {
+						slidesPerView: 'auto'
+					}
+			}	
+		}
+	});
+
+	$('#exhibitionImgMoreSlider .work a').on('click', function(){
+		$('.exhibitionDetailImg a').attr('href', $(this).find('img').attr('src'));
+		$('.exhibitionDetailImg a').attr('data-size', $(this).find('img').attr('data-img-size'));
+		$('.exhibitionDetailImg img').attr('src', $(this).find('img').attr('src'));
+		$('#exhibitionImgMoreSlider li').removeClass('on');
+		$(this).parents('li').addClass('on');
+	});
+}
+
+function tabType3Slider(){
+	sliderSwiper({
+		obj:'#tabType3Slider',
+		sliderSetting:{
+			slidesPerView: 'auto'
+		}
+	});	
+}
+
 function addPhotoFile(obj, callback){
 	var src;
 
@@ -709,6 +751,11 @@ function desingSelect(){
  function scrollPrevMove(obj){
 	 var pos = $(obj).prev().position().top;
 	 $('html, body').scrollTop(pos);
+ }
+
+ function showHide(show, hide){
+	$(show).show();
+	$(hide).hide();
  }
 
 //popup
