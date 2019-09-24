@@ -290,8 +290,8 @@ function inpSearchDel(){
 }
  
 
- //레이어 팝업 컨텐츠 높이에 따른 드래그 기능 (스크롤가능 유무에 따른 바 생성)
- function layerPop2Setting(){
+//레이어 팝업 컨텐츠 높이에 따른 드래그 기능 (스크롤가능 유무에 따른 바 생성)
+function layerPop2Setting(){
 	
 	if($('.layerPopup2').length <= 0) return;
 
@@ -331,14 +331,20 @@ function inpSearchDel(){
 		}
 		
 		var stopTop;
+		var oY;
+		var cY;
 		layer.draggable({
 			axis: 'y',
 			handle: handler,
 			/*revert: true,*/
-			start: function(){
-				
+			start: function(e, ui){
+				oY = e.clientY;
+			//	console.log('oY:' +oY)
 			},
-			drag: function() {
+			drag: function(e, ui) {
+				cY = e.clientY;
+				//console.log(ui.position.top)
+				//	console.log('cY:' +cY)
 				// console.log( 'dragging!: ' + layer.css('top') );
 				// if( status === 'none' ) {
 				// 	return false;
@@ -351,16 +357,27 @@ function inpSearchDel(){
 				// }
 
 
-				// var cLayerTop = parseFloat(layer.css('top'));	
-				// var headerh =$(this).find('.pop_header').length > 0 ?  $(this).find('.pop_header').outerHeight() : 0;	
-				// var totalh = headerh + $(this).find('.pop_padding').outerHeight() + 35; 
-				// var max = parent_h - totalh > 50 ? parent_h - totalh : 50
+				var cLayerTop = parseFloat(layer.css('top'));	
+				var headerh =$(this).find('.pop_header').length > 0 ?  $(this).find('.pop_header').outerHeight() : 0;	
+				var totalh = headerh + $(this).find('.pop_padding').outerHeight() + 35; 
+				var max = parent_h - totalh > 50 ? parent_h - totalh : 50
 				// //console.log(layerTop, max, parent_h, totalh)
-				// if(status == "max" && stopTop > cLayerTop){
-				// 	return false;
-				// }
+				//console.log('clientY:'+parseInt(parent_h -cY ) , parent_h, cY,max)
+				//console.log('screenY:'+e.screenY)
+				if(parseInt(ui.position.top) < max){
+					console.log('max:'+totalh, layer_h)
+					layer.css({
+						'top':  parent_h - layer_h > max ? parent_h - layer_h : max
+					});
+					return false;
+				}
+				if(status == "max" && oY > cY){
+					return false;
+				}
+
+			
 			},
-			stop: function(e) {
+			stop: function(e, ui) {
 				var layerTop = parseFloat(layer.css('top'));
 				var min = 	parent_h * 0.35;	
 				if(status == "max") min = parent_h * 0.2;	
@@ -369,6 +386,7 @@ function inpSearchDel(){
 				var max = 	parent_h * 0.7;	
 				
 				if(layerTop < min) {
+					console.log(parent_h, layer_h)
 					layer.stop().animate({
 						'top': parent_h - layer_h > 50 ? parent_h - layer_h : 50
 					}, 300, function(){
@@ -376,6 +394,8 @@ function inpSearchDel(){
 					});
 					status = "max";
 				}else if(layerTop < max && layerTop > min) {
+					if(status == "max" &&  oY >= cY) return;
+					console.log(status, oY, cY)
 					layer.stop().animate({
 						'top':  parent_h - layer_h > mid ? parent_h - layer_h : mid
 					}, 300, function(){
@@ -388,8 +408,9 @@ function inpSearchDel(){
 					}, 300, function(){
 						popClose(layer.parents('.layerPopup2'));
 						layer.attr('style', '');
-						status = "none";
+						
 					});
+					status = "none";
 				}
 
 				console.log(status)
@@ -404,31 +425,16 @@ function inpSearchDel(){
  }
 
  function autoheightScroll(){
-	var sct = $('.content').scrollTop();
- 	var visualHeight = $(window).height() > 460 ? $(window).height() : 460;
-	var num = 0;
-	
-	$('.full_visual_Wrp').css('height',visualHeight);
-
-	$('.content').on('scroll', function(e) {
-		var cSct =  $(this).scrollTop();
-		
-		if(sct > cSct || 0 > sct ){
-			for(var i=0;i<num;i++){
-				$('.content').stop();
+	var visualHeight = $(window).height(),
+	   $ele = $('.content');
+	   iScrollPos = 0;
+   
+	   $('.full_visual_Wrp').css('height',visualHeight);
+   
+	   $('.full_visual_Wrp').on('scroll touchmove mousewheel', function() {
+		   if($ele.scrollTop() == iScrollPos ){
+				$('.content').animate({scrollTop:visualHeight-60},200);
+				return false;
 			}
-			num = 0;
-			sct = $('.content').scrollTop();
-			return;
-		}else if(cSct < (visualHeight-80) && sct < cSct){
-			num +=1;
-			$('.content').animate({scrollTop:visualHeight-60}, 500);
-			sct = $('.content').scrollTop();
-		}else{
-			if(cSct >= (visualHeight-60)){
-				$('.content').stop();
-			}
-			sct = $('.content').scrollTop();
-		}	
-	});
- }
+	   });
+}
