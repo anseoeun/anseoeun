@@ -379,33 +379,3 @@ function inpSearchDel(){
 		
 	});
  }
-
- function autoheightScroll(){
-	var sct = $('.content').scrollTop();
- 	var visualHeight = $(window).height() > 460 ? $(window).height() : 460;
-	var num = 0;
-	
-	$('.full_visual_Wrp').css('height',visualHeight);
-
-	$('.content').on('scroll', function(e) {
-		var cSct =  $(this).scrollTop();
-		
-		if(sct > cSct || 0 > sct ){
-			for(var i=0;i<num;i++){
-				$('.content').stop();
-			}
-			num = 0;
-			sct = $('.content').scrollTop();
-			return;
-		}else if(cSct < (visualHeight-80) && sct < cSct){
-			num +=1;
-			$('.content').animate({scrollTop:visualHeight-60}, 500);
-			sct = $('.content').scrollTop();
-		}else{
-			if(cSct >= (visualHeight-60)){
-				$('.content').stop();
-			}
-			sct = $('.content').scrollTop();
-		}	
-	});
- }
