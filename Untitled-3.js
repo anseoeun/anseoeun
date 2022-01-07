@@ -350,30 +350,6 @@ function inpSearchDel(){
 				// 	return false;
 				// }
 			},
-			stop: function(e) {
-				var layerTop = parseFloat(layer.css('top'));		
-				var min = 	parent_h * 0.35;	
-				var mid = 	parent_h /2;	
-				var max = 	parent_h * 0.7;	
-				
-				if(layerTop < min) {
-					layer.stop().animate({
-						'top': parent_h - layer_h > 50 ? parent_h - layer_h : 50
-					}, 300);
-				}else if(layerTop < max && layerTop > min) {
-					layer.stop().animate({
-						'top':  parent_h - layer_h > mid ? parent_h - layer_h : mid
-					}, 300);
-				}else if(layerTop > max) {
-					layer.stop().animate({
-						'top': parent_h + 100
-					}, 300, function(){
-						popClose(layer.parents('.layerPopup2'));
-						layer.attr('style', '');
-					});
-				}
-			
-			}
 
 	});
 		
